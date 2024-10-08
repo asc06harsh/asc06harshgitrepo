@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="age">Age:</label>
+            <input type="range" id="age" name="age" min="0" max="100" value="18" oninput="this.nextElementSibling.value = this.value">
+            <output>18</output>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="business-administration">Business Administration</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="science">Science</option>
+            </select>
+
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the terms and conditions
+            </label>
+
+            <button type="submit">Register</button>
+            <button type="reset" class="btn">Reset</button>
+        </form>
+        <div class="form-footer">
+            <p>Already have an account? <a href="#">Login here</a></p>
+        </div>
+
+        <div class="media-container">
+            <h2>Listen to Some Music</h2>
+            <audio controls>
+                <source src="black-63805.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h2>Watch a Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AxirvCDALTA?si=faQjv5dX4RtgalF8" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
