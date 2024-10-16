@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Registration style.css">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Registration</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Student Registration</h1>
+        <form id="registration-form" onsubmit="return validateForm()">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" class="form-control" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" class="form-control" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" class="form-control" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter your phone number" class="form-control" required>
+
+            <label for="age">Age:</label>
+            <input type="range" id="age" name="age" min="0" max="100" value="18" oninput="this.nextElementSibling.value = this.value" class="form-control-range">
+            <output>18</output>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address" class="form-control" required></textarea>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" class="form-control" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="business-administration">Business Administration</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="science">Science</option>
+            </select>
+
+            <label>
+                <input type="checkbox" name="terms" id="terms" required> I agree to the terms and conditions
+            </label>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+        <div class="form-footer mt-3">
+            <p>Already have an account? <a href="#">Login here</a></p>
+        </div>
+
+        <div class="media-container">
+            <h2>Watch Movies</h2>
+
+            <label for="video-select">Select Video Category:</label>
+            <select id="video-select" onchange="updateVideoSection()" class="form-control">
+                <option value="comedy">Comedy Movies</option>
+                <option value="emotional">Emotional Movies</option>
+                <option value="thriller">Thriller Movies</option>
+            </select>
+
+            <div class="video-section" id="comedy-section">
+                <h3>Comedy Movies</h3>
+                <iframe src="https://www.youtube.com/embed/havARbP7Fyk" frameborder="0" allowfullscreen></iframe>
+                <div class="video-navigation text-center">
+                    <button class="btn btn-secondary" onclick="changeVideo('comedy', -1)">&#10094; Previous</button>
+                    <button class="btn btn-secondary" onclick="changeVideo('comedy', 1)">Next &#10095;</button>
+                </div>
+            </div>
+
+            <div class="video-section" id="emotional-section" style="display:none;">
+                <h3>Emotional Movies</h3>
+                <iframe src="https://www.youtube.com/embed/3Z14uE7U0HY" frameborder="0" allowfullscreen></iframe>
+                <div class="video-navigation text-center">
+                    <button class="btn btn-secondary" onclick="changeVideo('emotional', -1)">&#10094; Previous</button>
+                    <button class="btn btn-secondary" onclick="changeVideo('emotional', 1)">Next &#10095;</button>
+                </div>
+            </div>
+
+            <div class="video-section" id="thriller-section" style="display:none;">
+                <h3>Thriller Movies</h3>
+                <iframe src="https://www.youtube.com/embed/MN4z4ZkN8js" frameborder="0" allowfullscreen></iframe>
+                <div class="video-navigation text-center">
+                    <button class="btn btn-secondary" onclick="changeVideo('thriller', -1)">&#10094; Previous</button>
+                    <button class="btn btn-secondary" onclick="changeVideo('thriller', 1)">Next &#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const comedyVideos = [
+            "https://www.youtube.com/embed/havARbP7Fyk",
+            "https://www.youtube.com/embed/DZ6q5X7fAmU",
+            "https://www.youtube.com/embed/RUynRN6g4Zs"
+        ];
+        const emotionalVideos = [
+            "https://www.youtube.com/embed/3Z14uE7U0HY",
+            "https://www.youtube.com/embed/zFdi834FiZ4",
+            "https://www.youtube.com/embed/T94PHkuydcw"   
+        ];
+        const thrillerVideos = [
+            "https://www.youtube.com/embed/MN4z4ZkN8js",
+            "https://www.youtube.com/embed/IA5YlOXJ_PQ",
+            "https://www.youtube.com/embed/v2H1s9gj5DA"
+        ];
+
+        let currentComedyIndex = 0;
+        let currentEmotionalIndex = 0;
+        let currentThrillerIndex = 0;
+
+        function updateVideoSection() {
+            const selectedSection = document.getElementById('video-select').value;
+            document.querySelectorAll('.video-section').forEach(section => {
+                section.style.display = 'none'; 
+            });
+            document.getElementById(`${selectedSection}-section`).style.display = 'block'; 
+        }
+
+        function changeVideo(section, direction) {
+            let currentIndex;
+            let videos;
+
+            if (section === 'comedy') {
+                currentIndex = currentComedyIndex;
+                videos = comedyVideos;
+            } else if (section === 'emotional') {
+                currentIndex = currentEmotionalIndex;
+                videos = emotionalVideos;
+            } else {
+                currentIndex = currentThrillerIndex;
+                videos = thrillerVideos;
+            }
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = videos.length - 1; 
+            } else if (currentIndex >= videos.length) {
+                currentIndex = 0; 
+            }
+
+            const videoWrapper = document.querySelector(`#${section}-section iframe`);
+            videoWrapper.src = videos[currentIndex];
+
+            if (section === 'comedy') {
+                currentComedyIndex = currentIndex;
+            } else if (section === 'emotional') {
+                currentEmotionalIndex = currentIndex;
+            } else {
+                currentThrillerIndex = currentIndex;
+            }
+        }
+
+        
+        function validateForm() {
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const termsChecked = document.getElementById('terms').checked;
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            const phonePattern = /^\d{10}$/; 
+
+            if (fullName === "") {
+                alert("Full name is required.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            if (!termsChecked) {
+                alert("You must agree to the terms and conditions.");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
+    
+
+    
+</body>
+
+</html>
