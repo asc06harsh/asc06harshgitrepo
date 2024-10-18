@@ -15,27 +15,19 @@
     - enum
     - union
 ## Challenges
-  - accessing through git
-  - working on syntax
-  - looking through commands
+  - workin on enums datatype
+  - working on syntax in typescript
 ## Support Required
   -
 ## My contribution
-  - looking through more on using MDN Docs
-  - worked on codes for data fetching
+  - Referred MDN Docs
+  - performed emperiments on git version control system
+  - gone through guides and demos
+
 ## Pending / Completed
   -
 ## Feedback
+- Additional practice in real world projects 
 
 
-healthcare
-product and resources
-hi tech c anr 
-
-5 CIRCLE
-PLATFROM
-QUALITY
-EXPERINECE
-DATA 
-AIML
 
