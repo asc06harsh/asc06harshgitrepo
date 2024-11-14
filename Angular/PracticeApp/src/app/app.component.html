@@ -1,0 +1,99 @@
+<div class="container-fluid mt-4">
+  <div class="row">
+    
+    <!-- Live Data Preview Section -->
+    <div class="col-md-4">
+      <h2>Live Data Preview</h2>
+      <div class="data-preview">
+        <p><strong>Full Name:</strong> {{ formData.fullName }}</p>
+        <p><strong>Email:</strong> {{ formData.email }}</p>
+        <p><strong>Date of Birth:</strong> {{ formData.dob }}</p>
+        <p><strong>Phone Number:</strong> {{ formData.phone }}</p>
+        <p><strong>Age:</strong> {{ formData.age }}</p>
+        <p><strong>Address:</strong> {{ formData.address }}</p>
+        <p><strong>Gender:</strong> {{ formData.gender }}</p>
+        <p><strong>Course:</strong> {{ formData.course }}</p>
+        <p><strong>Agreed to Terms:</strong> {{ formData.terms ? 'Yes' : 'No' }}</p>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="col-md-8">
+      <h1>Student Registration</h1>
+      <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name"
+               class="form-control" [(ngModel)]="formData.fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address"
+               class="form-control" [(ngModel)]="formData.email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" class="form-control" [(ngModel)]="formData.dob" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" placeholder="Enter your phone number"
+               class="form-control" [(ngModel)]="formData.phone" required>
+
+        <label for="age">Age:</label>
+        <input type="range" id="age" name="age" min="0" max="100" value="18"
+               class="form-control-range" [(ngModel)]="formData.age" required>
+        <output>{{ formData.age }}</output>
+        <br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your address"
+                  class="form-control" [(ngModel)]="formData.address" required></textarea>
+
+        <label>Gender:</label>
+        <div class="gender">
+          <label><input type="radio" name="gender" value="male" [(ngModel)]="formData.gender" required> Male</label>
+          <label><input type="radio" name="gender" value="female" [(ngModel)]="formData.gender" required> Female</label>
+          <label><input type="radio" name="gender" value="other" [(ngModel)]="formData.gender" required> Other</label>
+        </div>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" class="form-control" [(ngModel)]="formData.course" required>
+          <option value="" disabled selected>Select a course</option>
+          <option value="computer-science">Computer Science</option>
+          <option value="business-administration">Business Administration</option>
+          <option value="engineering">Engineering</option>
+          <option value="arts">Arts</option>
+          <option value="science">Science</option>
+        </select>
+
+        <label>
+          <input type="checkbox" name="terms" id="terms" [(ngModel)]="formData.terms" required> I agree to the terms and conditions
+        </label>
+        <br>
+
+        <!-- CRUD Buttons -->
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="reset" class="btn btn-danger" (click)="onReset()">Reset</button>
+        <button type="button" class="btn btn-warning" (click)="updateEmployee()">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Display Employees Section -->
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2>Registered Employees</h2>
+
+      <div *ngFor="let employee of employees">
+        <div class="employee-card">
+          <p><strong>Full Name:</strong> {{ employee.fullName }}</p>
+          <p><strong>Email:</strong> {{ employee.email }}</p>
+          <p><strong>Phone:</strong> {{ employee.phone }}</p>
+          <p><strong>Gender:</strong> {{ employee.gender }}</p>
+          <p><strong>Course:</strong> {{ employee.course }}</p>
+          
+          <!-- Edit and Delete buttons for each employee -->
+          <button class="btn btn-primary" (click)="editEmployee(employee)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

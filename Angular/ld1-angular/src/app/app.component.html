@@ -1,0 +1,135 @@
+ <!--
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.component.css">
+    <style>
+        /* Summary Section Styles */
+        #summary-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #summary-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff; /* White color for the heading */
+        }
+
+        #summary-table-body th {
+            background-color: #4CAF50; /* Green background for table headers */
+            color: white; /* White text for table headers */
+        }
+
+        #summary-table-body td {
+            color: black; /* Black text for table data */
+        }
+    </style>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">E-Registration</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  
+    <div class="container mt-4">
+        <h1>Student Registration</h1>
+        <form id="registration-form" (ngSubmit)="displaySummary()" #registrationForm="ngForm">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" ngModel class="form-control" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" ngModel class="form-control" required>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" ngModel class="form-control" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter your phone number" ngModel class="form-control" required>
+    
+            <label for="age">Age:</label>
+            <input type="range" id="age" name="age" min="0" max="100" [(ngModel)]="age" (ngModelChange)="onAgeChange($event)" class="form-control-range">
+            <output>{{ age }}</output>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address" ngModel class="form-control" required></textarea>
+    
+            <label>Gender:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="male" ngModel> Male</label>
+                <label><input type="radio" name="gender" value="female" ngModel> Female</label>
+                <label><input type="radio" name="gender" value="other" ngModel> Other</label>
+            </div>
+    
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" ngModel class="form-control" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="business-administration">Business Administration</option>
+                <option value="engineering">Engineering</option>
+                <option value="arts">Arts</option>
+                <option value="science">Science</option>
+            </select>
+    
+            <label>
+                <input type="checkbox" name="terms" ngModel required> I agree to the terms and conditions
+            </label>
+    
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+    
+        <div class="form-footer mt-3">
+            <p>Already have an account? <a href="#">Login here</a></p>
+        </div>
+    
+        
+        <div id="summary-section" *ngIf="summaryVisible" style="margin-top: 30px;">
+            <h2 class="text-center">Registration Summary</h2>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr *ngFor="let item of summary">
+                        <th>{{ item.label }}</th>
+                        <td>{{ item.value }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>-->
+
+
+<h1>My Angular App....</h1>
+<h2>Property...{{title}}</h2>
+<h3>List OF employees</h3>
+<ol *ngFor="let employee of employees">
+    <li>{{employee.id}}</li>
+    <li>{{employee.name}}</li>
+    <li>{{employee.age}}</li>
+</ol>

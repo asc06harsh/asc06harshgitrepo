@@ -1,0 +1,113 @@
+
+.navbar {
+    background-color: #1f3c88; 
+    color: #ffffff;
+}
+
+.navbar h2 {
+    color: #f0f4f9; 
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #4CAF50; 
+    border: none;
+}
+.btn-success:hover {
+    background-color: #45a049; 
+}
+
+.btn-danger {
+    background-color: #e74c3c; 
+    border: none;
+}
+.btn-danger:hover {
+    background-color: #c0392b; 
+}
+
+.btn-info {
+    background-color: #3498db; 
+    border: none;
+}
+.btn-info:hover {
+    background-color: #2980b9; 
+}
+
+/* Main Container */
+.p-5.mb-4.bg-light {
+    background-color: #e9f1f7; 
+    color: #2c3e50; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+.table {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #1f3c88; 
+    color: #ffffff;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    color: #34495e;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #f4f8fc;
+    color: #34495e; 
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #d1e0ea;
+}
+
+.modal-title {
+    color: #1f3c88;
+    font-weight: bold;
+}
+
+.form-label {
+    color: #34495e;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #d1e0ea;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #1f3c88; 
+    box-shadow: 0px 0px 5px rgba(31, 60, 136, 0.5); 
+}
+
+
+.modal-footer .btn-secondary {
+    background-color: #bdc3c7; 
+    border: none;
+}
+.modal-footer .btn-secondary:hover {
+    background-color: #95a5a6; 
+}
+
+.modal-footer .btn-primary {
+    background-color: #1f3c88; 
+    border: none;
+}
+.modal-footer .btn-primary:hover {
+    background-color: #163570; 
+}
+
+

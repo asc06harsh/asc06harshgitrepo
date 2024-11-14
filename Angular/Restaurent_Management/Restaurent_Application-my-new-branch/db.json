@@ -1,0 +1,116 @@
+{
+  "posts": [
+    {
+      "id": "0",
+      "name": "annapurna",
+      "address": "NEAAR",
+      "email": "aanapurn @GMAIL.COM",
+      "services": "BE",
+      "mobile": 1234455
+    },
+    {
+      "id": "8fc8",
+      "name": "al zam zam ",
+      "address": "near telepjone square",
+      "email": "alzazam@gmail.com",
+      "services": "piz",
+      "mobile": 1234567
+    },
+    {
+      "id": "0741",
+      "name": "shree veg",
+      "address": "near ls pg",
+      "email": "dosa@gmail.com",
+      "services": "dosa,id",
+      "mobile": 9307637429
+    },
+    {
+      "id": "c8b0",
+      "name": "new restro",
+      "address": "akjhdsja",
+      "email": "hjsadbhxah",
+      "services": "hsdh",
+      "mobile": 8192713980
+    },
+    {
+      "id": "06dc",
+      "name": "hjjH",
+      "email": "kjadnjsn",
+      "mobile": 9823091,
+      "address": "ajhdsanjd",
+      "services": "cossj"
+    }
+  ],
+  "signup": [
+    {
+      "name": "arayan hotel 1",
+      "email": "sibashish@abc.com",
+      "mobile": 8769145511,
+      "password": "password@123",
+      "id": "1"
+    },
+    {
+      "name": "Selection",
+      "email": "selection@abc.com",
+      "mobile": 3164631649,
+      "password": "passowrd@123",
+      "id": "2"
+    },
+    {
+      "name": "Test",
+      "email": "test@test.com",
+      "mobile": 9876543210,
+      "password": "test@2023",
+      "id": "3"
+    },
+    {
+      "id": "76b7",
+      "name": "scofield",
+      "email": "scofield@gmail.com",
+      "mobile": 12345,
+      "password": "1234"
+    },
+    {
+      "id": "5a14",
+      "name": "scofield",
+      "email": "scofield@gmail.com",
+      "mobile": 613487,
+      "password": "1234"
+    },
+    {
+      "id": "9fad",
+      "name": "scofiled",
+      "email": "scofield@gmail.com",
+      "mobile": 123456,
+      "password": "1234"
+    },
+    {
+      "id": "6387",
+      "name": "Michael",
+      "email": "scofield@gmail.com",
+      "mobile": 9307637429,
+      "password": "123456"
+    },
+    {
+      "id": "f52b",
+      "name": "harsh",
+      "email": "harsh.gade@ascenom",
+      "mobile": 9307637429,
+      "password": "123456"
+    },
+    {
+      "id": "a79b",
+      "name": "Rohiy",
+      "email": "harsh.gade@ascenom",
+      "mobile": 9989897656,
+      "password": "123456"
+    },
+    {
+      "id": "fdbb",
+      "name": "harsh",
+      "email": "harsh.gade@ascenom",
+      "mobile": 9307637429,
+      "password": "123456"
+    }
+  ]
+}
