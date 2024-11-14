@@ -1,4 +1,4 @@
-/* General Styles */
+
 .container {
     max-width: 900px;
     margin: auto;
@@ -14,7 +14,7 @@
     margin-bottom: 20px;
 }
 
-/* Button Group */
+
 .d-flex.gap-2 > button {
     font-weight: bold;
     padding: 10px 15px;
@@ -53,7 +53,7 @@
     background-color: #138496;
 }
 
-/* Table Styles */
+
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -84,7 +84,7 @@
     border: 1px solid #ddd;
 }
 
-/* Action Buttons */
+
 .btn-sm {
     font-size: 12px;
     padding: 5px 10px;
@@ -111,7 +111,7 @@
     color: white;
 }
 
-/* Search Bar */
+
 .search-bar {
     border-radius: 20px 0 0 20px;
     padding: 10px 15px;
@@ -123,7 +123,7 @@
     padding: 10px 15px;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .d-flex.justify-content-between {
         flex-direction: column;
